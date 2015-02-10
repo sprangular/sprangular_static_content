@@ -8,19 +8,33 @@ Add to host app:
 
 Gemfile:
 
+```
+
 gem 'spree_static_content', github: 'DynamoMTL/spree_static_content' , branch: '2-4-stable'
-gem 'sprangular_static_content'
+gem 'sprangular_static_content', github: 'sprangular/sprangular_static_content'
+
+```
 
 Then run:
 
+```
 bundle install
 rails g spree_static_content:install
 
+```
 app/assets/javascripts/sprangular/host.coffee
+
+```
 angular.module('YourAppName', ['Sprangular', 'StaticContent'])
 
+```
+
 app/assets/javascripts/application.js
+
+```
 //= require sprangular/sprangular_static_content
+
+```
 
 
 
