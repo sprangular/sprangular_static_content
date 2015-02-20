@@ -9,10 +9,8 @@ Add to host app:
 Gemfile:
 
 ```
-
 gem 'spree_static_content', github: 'DynamoMTL/spree_static_content' , branch: '2-4-stable'
 gem 'sprangular_static_content', github: 'sprangular/sprangular_static_content'
-
 ```
 
 Then run:
@@ -25,15 +23,13 @@ rails g spree_static_content:install
 app/assets/javascripts/sprangular/host.coffee
 
 ```
-angular.module('YourAppName', ['Sprangular', 'StaticContent'])
-
+angular.module('YourAppName', ['Sprangular', 'Sprangular.StaticContent'])
 ```
 
 app/assets/javascripts/application.js
 
 ```
 //= require sprangular/sprangular_static_content
-
 ```
 
 
@@ -50,4 +46,3 @@ Be sure to bundle your dependencies and then create a dummy test app for the spe
 ## License
 
 MIT
-

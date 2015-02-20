@@ -1,4 +1,4 @@
-angular.module('StaticContent').controller 'PageShowCtrl', ($scope, $http, $routeParams, Status) ->
+angular.module('Sprangular.StaticContent').controller 'PageShowCtrl', ($scope, $http, $routeParams, Status) ->
   $http.get("/api/pages/#{$routeParams.id}.json").success((data) ->
     $scope.page = data
     Status.pageTitle        = $scope.page.title

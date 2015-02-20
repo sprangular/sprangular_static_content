@@ -1,4 +1,4 @@
-angular.module('StaticContent')
+angular.module('Sprangular.StaticContent')
        .config ($routeProvider) ->
          $routeProvider.when '/pages/:id',
            controller: 'PageShowCtrl'
