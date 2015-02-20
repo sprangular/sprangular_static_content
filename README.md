@@ -22,13 +22,13 @@ rails g spree_static_content:install
 
 In `app/assets/javascripts/sprangular/host.coffee`, add:
 
-```
+```coffeescript
 angular.module('YourAppName', ['Sprangular', 'Sprangular.StaticContent'])
 ```
 
 In `app/assets/javascripts/application.js`, add:
 
-```
+```javascript
 //= require sprangular/sprangular_static_content
 ```
 
