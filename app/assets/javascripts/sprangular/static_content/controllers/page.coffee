@@ -1,6 +1,3 @@
-angular.module('Sprangular.StaticContent').controller 'PageShowCtrl', ($scope, $http, $routeParams, Status) ->
-  $http.get("/api/pages/#{$routeParams.id}.json").success((data) ->
-    $scope.page = data
-    Status.pageTitle        = $scope.page.title
-    Status.meta.description = $scope.page.meta_description
-  )
+angular.module('Sprangular.StaticContent').controller 'PageShowCtrl', ($log, $scope, page) ->
+
+  $scope.page = page
