@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'spree_core', '~> 2.4.0'
   s.add_dependency 'spree_static_content'
+  s.add_dependency 'rails-assets-marked'
   s.add_dependency 'rails-assets-angular-marked'
 
   s.add_development_dependency 'capybara', '~> 2.0'
