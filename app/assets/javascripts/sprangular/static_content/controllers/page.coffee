@@ -1,2 +1,3 @@
-angular.module('Sprangular.StaticContent').controller 'PageShowCtrl', ($log, $scope, page) ->
+angular.module('Sprangular.StaticContent').controller 'PageShowCtrl', ($log, $scope, marked, page) ->
   $scope.page = page
+  $scope.html = marked(page.body)
