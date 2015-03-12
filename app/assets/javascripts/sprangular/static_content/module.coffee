@@ -1,1 +1,1 @@
-angular.module('Sprangular.StaticContent', ['Sprangular'])
+angular.module('Sprangular.StaticContent', ['Sprangular', 'hc.marked'])
