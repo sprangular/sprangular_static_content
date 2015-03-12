@@ -6,4 +6,4 @@ angular.module('Sprangular.StaticContent')
       resolve:
         page: (StaticContent, $route)->
           slug = $route.current.params.id
-          StaticContent.findContent(slug)
+          StaticContent.find(slug)
