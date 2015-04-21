@@ -29,7 +29,25 @@ angular.module('YourAppName', ['Sprangular', 'Sprangular.StaticContent'])
 In `app/assets/javascripts/application.js`, add:
 
 ```javascript
-//= require sprangular/sprangular_static_content
+//= require sprangular/static_content
+```
+
+## Clean URLs
+
+By default URLs are prefixed with `/pages/:slug`, if you'd like to use cleaner URLs `/:slug` you can define a globbing route in your routes.coffee
+
+```coffee
+angular.module('YourApp').config ($routeProvider) ->
+
+  $routeProvider
+    .when '/about',
+      ...
+
+    .when '/privacy',
+      ...
+
+  # add globbing routes
+  Sprangular.StaticContent.addRoutes($routeProvider)
 ```
 
 ## Testing
