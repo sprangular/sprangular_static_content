@@ -14,8 +14,8 @@ Sprangular.StaticContent =
       controller: 'PageShowCtrl'
       templateUrl: 'pages/show.html'
       resolve:
-        page: (StaticContent, $route, $location)->
+        page: (StaticContent, $route, $window)->
           slug = $route.current.params.slug
 
           StaticContent.find(slug).then (->), ->
-            $location.path('/404')
+            $window.location.href = "/not-found"
