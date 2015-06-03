@@ -17,5 +17,5 @@ Sprangular.StaticContent =
         page: (StaticContent, $route, $window)->
           slug = $route.current.params.slug
 
-          StaticContent.find(slug).then (->), ->
+          StaticContent.find(slug).then ((data) -> data), ->
             $window.location.href = "/not-found"
